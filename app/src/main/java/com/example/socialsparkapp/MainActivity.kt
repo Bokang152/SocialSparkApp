@@ -62,7 +62,7 @@ fun SocialSparkApp(modifier: Modifier = Modifier) {
                 errorMessage = ""
             } else {
                 suggestion = ""
-                errorMessage = "Invalid time. Try: morning, afternoon, evening."
+                errorMessage = "Invalid time. Try: morning , mid-morning , afternoon , afternoon snack time , dinner , after dinner , night ."
             }
         }) {
             Text("Get Suggestion")
@@ -90,7 +90,7 @@ fun SocialSparkApp(modifier: Modifier = Modifier) {
 
 // Validation Logic
 fun validateInput(input: String): Boolean {
-    val validTimes = listOf("morning", "afternoon", "evening")
+    val validTimes = listOf("morning", "mid-morning", "afternoon", "afternoon snack time", "dinner", "after dinner" , "night")
     return validTimes.contains(input.lowercase())
 }
 
@@ -100,8 +100,12 @@ fun validateInput(input: String): Boolean {
 fun getSocialSpark(time: String): String {
     return when (time.lowercase()) {
         "morning" -> "Send a 'Good morning' text to a family member."
+        "mid-morning" -> "Reach out to a colleague with a quick 'Thank you'."
         "afternoon" -> "Share a funny meme or interesting link with a friend."
-        "evening" -> "Call a friend or relative for a 5-minute catch-up."
+        "afternoon snack time" -> "Send a quick 'thinking of you' message."
+        "dinner" -> "Call a friend or relative for a 5-minute catch-up."
+        "after dinner" -> "Leave a thoughtful comment on a friend's post."
+        "night" -> "Leave a thoughtful comment on a friend's post."
         else -> "" // Handled by validation
     }
 }
