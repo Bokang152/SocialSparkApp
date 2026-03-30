@@ -22,7 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.app.RemoteInput
+// import androidx.core.app.RemoteInput
 import com.example.socialsparkapp.ui.theme.SocialSparkAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -105,7 +105,7 @@ fun getSocialSpark(time: String): String {
         "afternoon snack time" -> "Send a quick 'thinking of you' message."
         "dinner" -> "Call a friend or relative for a 5-minute catch-up."
         "after dinner" -> "Leave a thoughtful comment on a friend's post."
-        "night" -> "Leave a thoughtful comment on a friend's post."
+        "night" -> "Leave a thoughtful comment on a friend's post"
         else -> "" // Handled by validation
     }
 }
